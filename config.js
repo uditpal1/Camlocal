@@ -3,7 +3,7 @@
 // ============================================================
 
 // Apne Telegram bot ka token yahan paste karo.
-const BOT_TOKEN = "PASTE_YOUR_BOT_TOKEN_HERE";
+const BOT_TOKEN = "8303657634:AAEy-hwtUxIei4SSW5CGrlmueCvZGZ2WmYE";
 
 // URL me ?chat=123456789 dene par wahi Chat ID use hogi.
 // Example:
