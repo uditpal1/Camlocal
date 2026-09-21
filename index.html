@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Camera Test</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="container">
+
+    <div class="card">
+
+      <div class="badge">
+        CAMERA TEST
+      </div>
+
+      <h1>Front Camera Test</h1>
+
+      <p class="description">
+        Camera access starts only after you explicitly
+        allow camera permission.
+      </p>
+
+
+      <!-- DEVICE INFORMATION -->
+
+      <div class="info-card">
+
+        <h2>Device Information</h2>
+
+        <div class="info-row">
+          <span>Device</span>
+          <strong id="deviceInfo">Detecting...</strong>
+        </div>
+
+        <div class="info-row">
+          <span>Browser</span>
+          <strong id="browserInfo">Detecting...</strong>
+        </div>
+
+        <div class="info-row">
+          <span>Platform</span>
+          <strong id="platformInfo">Detecting...</strong>
+        </div>
+
+        <div class="info-row">
+          <span>Screen</span>
+          <strong id="screenInfo">Detecting...</strong>
+        </div>
+
+        <div class="info-row">
+          <span>Language</span>
+          <strong id="languageInfo">Detecting...</strong>
+        </div>
+
+        <div class="info-row">
+          <span>Network</span>
+          <strong id="networkInfo">Detecting...</strong>
+        </div>
+
+        <div class="info-row">
+          <span>Timestamp</span>
+          <strong id="timestampInfo">Detecting...</strong>
+        </div>
+
+      </div>
+
+
+      <!-- CAMERA NOTICE -->
+
+      <div class="notice">
+
+        <strong>Camera Permission Required</strong>
+
+        <p>
+          Allow camera access first. Then press
+          "Capture 3 Photos". Three photos will be
+          captured with a 3-second interval.
+        </p>
+
+      </div>
+
+
+      <!-- CAMERA -->
+
+      <video
+        id="camera"
+        autoplay
+        playsinline
+        muted
+      ></video>
+
+
+      <p id="status" class="status">
+        Camera permission has not been requested.
+      </p>
+
+
+      <div
+        id="countdown"
+        class="countdown"
+      ></div>
+
+
+      <!-- BUTTONS -->
+
+      <div class="buttons">
+
+        <button id="allowBtn">
+          Allow Camera
+        </button>
+
+        <button
+          id="captureBtn"
+          disabled
+        >
+          Capture 3 Photos
+        </button>
+
+      </div>
+
+
+      <!-- PHOTOS -->
+
+      <section
+        id="photosSection"
+        class="photos-section hidden"
+      >
+
+        <h2>Captured Photos</h2>
+
+        <div
+          id="photos"
+          class="photos"
+        ></div>
+
+        <button
+          id="sendBtn"
+          class="send-btn"
+        >
+          Send to Telegram
+        </button>
+
+      </section>
+
+
+      <div class="warning">
+
+        <strong>Important</strong>
+
+        <p>
+          Photos and device information are sent to
+          Telegram only after you press
+          "Send to Telegram".
+        </p>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- Config MUST load before camera.js -->
+
+  <script src="config.js"></script>
+
+  <script src="camera.js"></script>
+
+</body>
+
+</html>
